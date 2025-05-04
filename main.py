@@ -32,6 +32,10 @@ async def mlbpicks(ctx):
     data = ["Aaron Nola", "Over 6.5 Ks", "6.5", "+100", "Caesars", "7.4", "0.75", "High", "TBD"]
     await ctx.send("**MLB AI Picks:**\n[0.75u] Aaron Nola OVER 6.5 Ks — +100 at Caesars (Proj: 7.4)")
 
+@bot.command()
+async def nba_parlay(ctx):
+    await ctx.send("Here are today's NBA parlay picks...")
+
 @tasks.loop(minutes=10)
 async def schedule_posts():
     now = datetime.now(eastern)
