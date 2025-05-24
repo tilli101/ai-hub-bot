@@ -20,6 +20,7 @@ eastern = pytz.timezone("US/Eastern")
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user}")
+    await bot.change_presence(activity=discord.Game(name="Dropping AI Picks"))
     schedule_posts.start()
 
 @bot.command()
